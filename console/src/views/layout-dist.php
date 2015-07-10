@@ -12,13 +12,13 @@
 <script>location.href="/modern-browser-required";</script>
 <![endif]-->
 
-<link rel="stylesheet" href="/assets/css/style-97dfd20ccd.css"/>
+<link rel="stylesheet" href="/assets/css/style-8927b08012.css"/>
 
 <link rel="stylesheet" href="/assets/css/main-d871ce6be7.css"/>
 
-<script src="/assets/js/vendor-65c6988e47.js"></script>
+<script src="/assets/js/vendor-8ddaa8c3a5.js"></script>
 
-<script src="/assets/js/main-bc8d3080e7.js"></script>
+<script src="/assets/js/main-2cfcb44f9f.js"></script>
 
 <script>
 var _auth_by_third_part = <?php echo json_encode(!!Flight::get('auth_by_third_part')); ?>;
@@ -163,5 +163,14 @@ $(function(){
 });
 </script>
 
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-58076606-2', 'auto');
+// ga('send', 'pageview');
+</script>
 </body>
 </html>

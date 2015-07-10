@@ -54,8 +54,8 @@ function($httpProvider ,  ngClipProvider){
 
 //--- 运行 start
 .run([
-        '$rootScope', 'Dialog', 'Me', 'console',
-function($rootScope ,  Dialog ,  Me ,  console){
+        '$rootScope', '$window', '$location', 'Dialog', 'Me', 'console',
+function($rootScope ,  $window ,  $location ,  Dialog ,  Me ,  console){
   // 页面切换错误
   $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error){
     console.error('$stateChangeError', error);
@@ -74,6 +74,16 @@ function($rootScope ,  Dialog ,  Me ,  console){
         status: error.status + ' ' + error.statusText,
         data: error.data
       }
+    });
+  });
+
+  // Google 统计
+  $rootScope.$on('$stateChangeSuccess', function(){
+    if (!$window.ga) {
+      return;
+    }
+    $window.ga('send', 'pageview', {
+      page: $location.path()
     });
   });
 
